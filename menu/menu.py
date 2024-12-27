@@ -4,7 +4,7 @@ import json
 # Establish a connection to the database
 my_db = mysql.connector.connect(
     user="root",
-    password="",
+    password="o89h^h7r^Jr*bL1",
     host="127.0.0.1",
     database="restaurant_management"
 )
