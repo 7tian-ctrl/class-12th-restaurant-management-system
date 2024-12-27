@@ -95,6 +95,16 @@ def order_report(menu_categories= menu_category(), menu_items= menu_order_option
      info1 = inquirer.prompt(question1)
      result_update(info1)
 
+     phone = [
+          inquirer.Text(
+               "phone",
+               message= "Please enter your phone number"
+          ),
+     ]
+
+     phone_no = inquirer.prompt(phone)
+     result_update(phone_no)
+
      question2 = [
           inquirer.List(
                f"category{order_id}",
@@ -158,7 +168,7 @@ def order_report(menu_categories= menu_category(), menu_items= menu_order_option
           confirm_question = [
                inquirer.Confirm(
                     "confirm",
-                    message= "Would you like to order again?"
+                    message= "Would you like to order more?"
                )
           ]
 
@@ -173,8 +183,6 @@ def order_report(menu_categories= menu_category(), menu_items= menu_order_option
 
      total_bill = fetch_prices(result)
      result.update({"Total Bill": total_bill})
-
-     print("\nYour order has been placed.\n")
      
      return result
 
