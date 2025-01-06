@@ -10,7 +10,7 @@ def payment():
     my_db = mysql.connector.connect(
         user = "root",
         host = "127.0.0.1",
-        password = "",
+        password = "o89h^h7r^Jr*bL1",
         database = "restaurant_management"
     )
 
@@ -65,15 +65,15 @@ def payment():
             self.wallet.withdraw(amount)
 
         def check_balance(self):
-            return self.wallet.check_balance()
-    
+            return self.wallet.check_balance()    
+
     class PaymentSystem:
         def __init__(self, user):
             self.user = user
 
         def make_payment(self, amount):
             self.user.withdraw(amount)
-
+            
     cursor.execute("SELECT Name, customer_id, total_bill FROM Customers")
 
     info = cursor.fetchall()

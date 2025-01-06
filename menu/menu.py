@@ -1,18 +1,15 @@
 import mysql.connector
 import json
 
-# Establish a connection to the database
 my_db = mysql.connector.connect(
     user="root",
-    password="",
+    password="o89h^h7r^Jr*bL1",
     host="127.0.0.1",
     database="restaurant_management"
 )
 
-# Create a cursor object to execute SQL queries
 cursor = my_db.cursor()
 
-# Create the Menu table
 query = """CREATE TABLE IF NOT EXISTS Menu(
     menu_item_id INT AUTO_INCREMENT PRIMARY KEY,
     Category VARCHAR(255),
@@ -29,7 +26,6 @@ except mysql.connector.Error as err:
 
 key_mover = 0
 
-# Insert data into the Menu table
 query = "INSERT INTO Menu (Category, Name, Description, Price) VALUES (%s, %s, %s, %s)"
 try:
     with open("menu/menu.json", "r") as f:
@@ -52,7 +48,6 @@ try:
 except mysql.connector.Error as err:
     print("Error inserting data: {}".format(err))
 
-# Retrieve data from the Menu table
 query = "SELECT * FROM Menu"
 try:
     cursor.execute(query)
@@ -67,6 +62,5 @@ except mysql.connector.Error as err:
     print("Error retrieving data: {}".format(err))
 
 
-# Close the cursor and connection
 cursor.close()
 my_db.close()

@@ -27,7 +27,7 @@ def order_management():
     my_db = mysql.connector.connect(
         user="root",
         host="127.0.0.1",
-        password="",
+        password="o89h^h7r^Jr*bL1",
         database="restaurant_management"
     )
 
