@@ -76,3 +76,4 @@ def staff_management():
             print("Invalid choice! Please select again.")
 
 
+staff_management()

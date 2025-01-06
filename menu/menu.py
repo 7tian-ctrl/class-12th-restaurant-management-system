@@ -3,7 +3,7 @@ import json
 
 my_db = mysql.connector.connect(
     user="root",
-    password="o89h^h7r^Jr*bL1",
+    password="",
     host="127.0.0.1",
     database="restaurant_management"
 )

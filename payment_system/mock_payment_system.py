@@ -10,7 +10,7 @@ def payment():
     my_db = mysql.connector.connect(
         user = "root",
         host = "127.0.0.1",
-        password = "o89h^h7r^Jr*bL1",
+        password = "",
         database = "restaurant_management"
     )
 
